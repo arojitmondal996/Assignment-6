@@ -1,0 +1,64 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.activeButton {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.categoryButton {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 30px;
+    gap: 10px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.categoryButton.active{
+    background-color: #007bff;
+    color: #fff;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: #FF3D00 transparent;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
